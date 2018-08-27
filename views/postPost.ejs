@@ -1,0 +1,27 @@
+<% include ./partials/header %>
+    <form class="" action="/blog/post" method="post">
+      <input class='title-input' type="text" name="title" placeholder="title"><br><br>
+      <textarea name="content" rows="30" cols="50" placeholder="post your blog here...">
+      </textarea><br><br>
+
+  <!-- SELLECT THE TAGS -->
+      <select class="" name="tag">
+        <%let list =[]%>
+        <%result.forEach(item=>{%>
+          <%if(!(list.includes(item.tag))&& item.tag!==null){%>
+            <%list.push(item.tag)%>
+          <%}%>
+        <%})%>
+        <%list.forEach(tag=>{%>
+          <option value=<%=tag%>><%=tag%></option>
+        <%})%>
+      </select><br><br>
+      <h4>Add Picture:</h4><br>
+      <input type="file" name="addfile">
+      <button class='btn'type="submit">Submit</button>
+    </form>
+    <a href="/blog">Back</a>
+  </body>
+</html>
+
+<% include ./partials/footer %>

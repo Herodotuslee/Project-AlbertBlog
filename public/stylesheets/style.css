@@ -1,0 +1,177 @@
+
+*{
+  padding:0px;
+  margin: 0px;
+
+
+}
+body,html{
+  background-color:#fff;
+}
+
+.wrapper{
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.container{
+  /* width: 100%; */
+  max-width: 1240px;
+  margin: 0 15vw;
+
+}
+
+
+/* NAVBAR */
+
+nav{
+  background: #333;
+}
+
+nav ul{
+  list-style-type: none;
+  padding: 0;
+}
+
+nav a{
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  display:block;
+  padding: 1vw;
+}
+
+nav a:hover{
+  background-color: #555;
+}
+
+
+
+@media screen and (min-width: 760px){
+
+nav ul{
+  display: flex;
+}
+
+nav li{
+  flex: 1 1 0;
+}
+
+nav{
+  display: flex;
+  justify-content: space-between;
+}
+
+ul.social{
+  margin: 0;
+}
+
+}
+
+form{
+  text-align: center;
+}
+
+input{
+  margin-top: 3vh;
+  margin-bottom: 1vh;
+  min-width: 20em;
+
+}
+
+footer{
+  text-align: center;
+}
+
+.btn{
+  background-color: #fff;
+  border-color:#3899ec;
+  /* border: none; */
+  color: #3899ec;
+  padding: 0.5em 1.3em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.1em;
+  border-radius: 1.0em;
+  margin-top:0.5em;
+  margin-button:0.5em;
+  transition: background-color .3s
+}
+
+.btn:hover{
+  background-color: #3899ec;
+  border-color: #fff;
+  color:  #fff;
+  padding: 0.5em 1.3em;
+  /* box-shadow:  */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.1em;
+  border-radius: 1.0em;
+  margin-top:0.5em;
+  margin-button:0.5em;
+
+}
+
+.btn-post{
+  margin:0 auto;
+}
+
+.btn-delete{
+  /* margin:1em; */
+  /* border-color: red; */
+  color:red;
+  /* margin:1em 30vw 1em 30vw; */
+}
+
+.btn-delete :hover{
+  /* margin:1em; */
+  background-color: #red;
+  color:#fff;
+  /* margin:1em 30vw 1em 30vw; */
+}
+
+
+
+.login-box{
+  margin:2em;
+  text-align: center;
+}
+
+.post-box{
+  max-width: 35vw;
+  margin:3em;
+}
+
+.big-blog-box{
+  display:grid;
+  grid-template-columns: : 40% 25%;
+  /* background-color: red; */
+    /* display:inline-block; */
+
+}
+
+.mid-blog-box{
+  background-color: #fff;
+    /* display:block; */
+}
+
+.tag-box{
+  background: red;
+    /* display:block; */
+}
+
+.comment-box{
+  text-align: center;
+  margin: 2em;
+}
+
+.title-input{
+  width:16vw;
+  height:2em;
+  text-align: center;
+
+}

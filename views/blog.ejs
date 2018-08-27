@@ -1,0 +1,44 @@
+<% include ./partials/header %>
+    <section>
+      <div class="container">
+        <div class="big-blog-box">
+
+          <div class="mid-blog-box">
+            <h1><%=message%></h1>
+            <a class="btn btn-post"href="/blog/post">Post</a>
+            <%posts.forEach((post)=>{ %>
+              <article class="post-box">
+                <h1><%=post.title%></h1><br>
+                <img src="<%=post.img_url%>" alt="post-image"><br><br>
+                <p><%=post.content%></p>
+                <p><%=post.updated_at%></p>
+                <a class='btn' href="/blog/show/<%=post.id%>">Info</a>
+                <a class='btn btn-delete' href="/blog/delete/<%=post.id%>">Delete</a>
+              </article>
+              <hr>
+            <% }) %>
+          </div>
+          <div class="btn">
+xx
+          </div>
+
+
+          <div class="tag-box">
+              <%let list =[]%>
+              <%posts.forEach(item=>{%>
+                <%if(!(list.includes(item.tag))&& item.tag!==null){%>
+                  <%list.push(item.tag)%>
+                <%}%>
+              <%})%>
+              <%list.forEach(tag=>{%>
+                <button class='btn' type="button" name=<%=tag%>><%=tag%></button>
+              <%})%>
+          </div>
+
+
+        </div>
+      </div>
+
+
+    </section>
+<% include ./partials/footer %>
